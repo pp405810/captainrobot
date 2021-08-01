@@ -89,7 +89,7 @@ async def buttons_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit("Generating Captcha ...")
         print("Fetching Captcha JSON Data ...")
         async with aiohttp.ClientSession() as session:
-            async with session.get("https://telegra.ph/file/f8042ee4587e6abc15e74.jpg") as res:
+            async with session.get(f"https://api.abirhasan.wtf/captcha?token={Config.CAPTCHA_API_TOKEN}") as res:
                 if res.status != 200:
                     try:
                         UserOnChat = await bot.get_chat_member(user_id=cb.from_user.id, chat_id=cb.message.chat.id)
