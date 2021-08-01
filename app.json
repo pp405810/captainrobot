@@ -7,21 +7,21 @@
         "captcha",
         "bot"
     ],
-    "repository": "https://github.com/AbirHasan2005/Emoji-Captcha-Bot",
-    "website": "https://telegram.dog/AbirHasan2005",
-    "success_url": "https://t.me/DevsZone",
+    "repository": "https://github.com/MRK-YT/MT-Captcha-Bot",
+    "website": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
+    "success_url": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
     "env": {
         "API_ID": {
-            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
+            "description": "Get this value from my.telegram.org or @MT_MyTelegramOrg_Bot"
         },
         "API_HASH": {
-            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
+            "description": "Get this value from my.telegram.org or @MT_MyTelegramOrg_Bot"
         },
         "BOT_TOKEN": {
             "description": "Get this from @BotFather"
         },
         "MONGODB_URI": {
-            "description": "MongoDB URI for Saving Chat Settings. Video Tutorial Here: https://www.youtube.com/watch?v=aXlF80Cn7iU"
+            "description": "MongoDB URI for Saving Chat Settings. Video Tutorial Here: "
         },
         "OWNER_ID": {
             "description": "Your Telegram User ID for using Admin commands.",
@@ -35,7 +35,7 @@
             "description": "Your Telegram Group ID where the bot will ask for verify by Captcha."
         },
         "CAPTCHA_API_TOKEN": {
-            "description": "Needs Captcha API Token to get Captcha. Get this from https://t.me/DevsZone !!"
+            "description": "Needs Captcha API Token to get Captcha. Get this from https://t.me/Mo_Tech_Group!!"
         }
     },
     "buildpacks": [
