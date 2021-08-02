@@ -17,12 +17,6 @@ CaptchaBot = Client(
 )
 CaptchaDB = {}
 
-
-@CaptchaBot.on_message(filters.command("start"))
-async def start_handler(_, event: Message):
-    await event.reply_text("Hi, I am captcha bot by @Mo_Tech_YT")
-
-
 @CaptchaBot.on_chat_member_updated()
 async def welcome_handler(bot: Client, event: Message):
     if (event.chat.id != Config.GROUP_CHAT_ID) or (event.from_user.is_bot is True):
@@ -89,7 +83,7 @@ async def buttons_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit("Generating Captcha ...")
         print("Fetching Captcha JSON Data ...")
         async with aiohttp.ClientSession() as session:
-            async with session.get(f"{"CaptchaAnswer":"Answer: \ud83d\udc3b \u2615\ufe0f \ud83c\udf11 \ud83c\udf55 \ud83c\udf7a \ud83c\udf5f","DownloadURL":"https://telegra.ph/file/af3ee99cb24d235b5fbf0.png","success":true}") as res:
+            async with session.get(f"https://api.abirhasan.wtf/captcha?token={Config.CAPTCHA_API_TOKEN}") as res:
                 if res.status != 200:
                     try:
                         UserOnChat = await bot.get_chat_member(user_id=cb.from_user.id, chat_id=cb.message.chat.id)
