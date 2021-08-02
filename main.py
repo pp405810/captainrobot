@@ -17,6 +17,10 @@ CaptchaBot = Client(
 )
 CaptchaDB = {}
 
+@CaptchaBot.on_message(filters.command("start"))
+async def start_handler(_, event: Message):
+    await event.reply_text("Hi, I am captcha bot by @Mo_Tech_YT.")
+
 @CaptchaBot.on_chat_member_updated()
 async def welcome_handler(bot: Client, event: Message):
     if (event.chat.id != Config.GROUP_CHAT_ID) or (event.from_user.is_bot is True):
