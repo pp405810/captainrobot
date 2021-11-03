@@ -19,7 +19,7 @@ CaptchaDB = {}
 
 @CaptchaBot.on_message(filters.command("start"))
 async def start_handler(_, event: Message):
-    await event.reply_text("Hi, I am captcha bot by @Mo_Tech_YT.")
+    await event.reply_text("Hi, {} 😵‍💫 i a captcha bot for malayalam movies you can't me in your group. Ok so go and our group @malayalam_movies_group_2.")
 
 @CaptchaBot.on_chat_member_updated()
 async def welcome_handler(bot: Client, event: Message):
